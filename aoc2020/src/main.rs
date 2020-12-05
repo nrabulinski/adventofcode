@@ -3,6 +3,8 @@ use clap::{Arg, App, Error, ErrorKind};
 mod day1;
 mod day2;
 mod day3;
+mod day4;
+mod day5;
 
 macro_rules! days {
     ($d:expr, $p:expr => $($day:literal $name:ident),+) => {
@@ -32,6 +34,6 @@ fn main() {
     let part: u8 = matches.value_of("part").and_then(|d| d.parse().ok()).unwrap();
     days! {
         day, part =>
-        1 day1, 2 day2, 3 day3
+        1 day1, 2 day2, 3 day3, 4 day4, 5 day5
     }
 }
